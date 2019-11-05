@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,72 +7,69 @@
     tools:context=".MainActivity_2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="fill_parent"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:background="#091b41"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp">
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="15dp"
-            android:layout_height="10dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:background="@drawable/menu_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="@dimen/header_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        </ImageView>
-        <ImageView
-            android:scaleType="fitXY"
-            android:id="@+id/imageView2"
-            android:layout_width="70dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:background="@drawable/peekster_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.512">
+        <Switch
 
-        </ImageView>
-
-        <EditText
-            android:textSize="10dp"
-            android:hint="  Titles, people, genres"
-            android:paddingLeft="10dp"
-            android:drawableLeft="@drawable/ic_search_white"
-            android:layout_width="150dp"
-            android:layout_height="20dp"
-              android:ems="16"
-            android:background="@drawable/search_bg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="100dp">
-
-        </EditText>
-
-        <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/switch_kids"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-             android:layout_marginRight="18dp"
-            android:src="@drawable/user_image_demo"
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginRight="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleX="0.7"
+
+            android:scaleY="0.7"
+            android:thumbTint="#374665"
+            android:trackTint="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/menu_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/peekster_logo"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512"></ImageView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/icon_bell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -83,66 +79,102 @@
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:src="@drawable/icon_bell"
+            android:src="@drawable/sync_other_device"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintVertical_bias="0.515" />
 
-        <Switch
-            android:id="@+id/switch_kids"
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="5dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:scaleX="0.7"
-              android:scaleY="0.7"
-            android:thumbTint="#374665"
-            android:trackTint="#fff"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/user_image_demo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Kids"
+            android:textColor="@color/text_1"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/switch_kids"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Get Media On Other Device"
+            android:textColor="@color/text_1"
+            android:textSize="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/search_bg"
+            android:drawableLeft="@drawable/ic_search_white"
+            android:ems="16"
+            android:hint="  Titles, people, genres"
+            android:paddingLeft="10dp"
 
-        <TextView
             android:textSize="10dp"
-
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-             android:text="Kids"
-            android:textColor="@color/text_1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/switch_kids"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent"></EditText>
 
-
-
-        <ImageView
-            android:id="@+id/synce"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:src="@drawable/sync_other_device"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/switch_kids"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.515" />
-
-        <TextView
-            android:textSize="8sp"
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-             android:text="Get Media On Other Device"
-            android:textColor="@color/text_1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/synce"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/linearLayout"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/header_height_add"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/menu_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ctegory_recyclerView"
+            ></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/feagment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"></LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
